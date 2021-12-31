@@ -41,7 +41,7 @@ jobs:
         
     - name: Change
       run: |
-          echo "version=$(cat ./config/deployment.yaml | grep version: | awk '{print $2}')" >> $GITHUB_ENV
+          echo "version=$(cat ./config/deployment.yaml | grep image: | awk '{print $2}')" >> $GITHUB_ENV
     
     - name: Update Tag
       run: |
